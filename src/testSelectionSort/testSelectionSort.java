@@ -20,6 +20,7 @@ class testSelectionSort {
 	
 	//test rundown
 	public void testPositive(){
+		//Given
 		SelectionSort selectionSort = new SelectionSort();		//Add new function from main class
 		int[] arr = new int[5];		//Add initial array
 		arr[0] = 8;
@@ -41,6 +42,8 @@ class testSelectionSort {
 			int[] arrSelectionSort = testData.clone();
 			
 			selectionSort.selectionSort(arrSelectionSort);
+			
+			//Then
             assertArrayEquals(expectedSortedArr, arrSelectionSort);
 		}
 	}
@@ -60,6 +63,7 @@ class testSelectionSort {
 		Sortedarr[2] = -8;
 		Sortedarr[3] = -7;
 		Sortedarr[4] = -2;
+		//When
 		for (int i = 0; i < arr.length; i++) {
 			int[] testData = arr;
 			int[] expectedSortedArr = Sortedarr;
@@ -67,6 +71,8 @@ class testSelectionSort {
 			int[] arrSelectionSort = testData.clone();
 			
 			selectionSort.selectionSort(arrSelectionSort);
+			
+			//Then
             assertArrayEquals(expectedSortedArr, arrSelectionSort);
 		}
 	}
@@ -86,6 +92,7 @@ class testSelectionSort {
 		Sortedarr[2] = 0;
 		Sortedarr[3] = 7;
 		Sortedarr[4] = 9;
+		//When
 		for (int i = 0; i < arr.length; i++) {
 			int[] testData = arr;
 			int[] expectedSortedArr = Sortedarr;
@@ -93,6 +100,8 @@ class testSelectionSort {
 			int[] arrSelectionSort = testData.clone();
 			
 			selectionSort.selectionSort(arrSelectionSort);
+			
+			//Then
             assertArrayEquals(expectedSortedArr, arrSelectionSort);
 		}
 	}
