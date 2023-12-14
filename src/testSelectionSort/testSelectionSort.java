@@ -1,8 +1,9 @@
 package testSelectionSort;
 
-import static org.junit.Assert.*;
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 
 import SelectionSort.SelectionSort;
 
@@ -33,57 +34,68 @@ class testSelectionSort {
 		Sortedarr[3] = 9;
 		Sortedarr[4] = 10;
 	    //When
-		selectionSort.selectionSort(arr); 		// function.functionsortmethod(initial array)
-	        
-		//Then
-		assertArrayEquals(Sortedarr, selectionSort.selectionSort(arr)); 	//assertArrayEquals(Sorted Array, when function)
-		/** add tests to check for this unit test **/
+		for (int i = 0; i < arr.length; i++) {
+			int[] testData = arr;
+			int[] expectedSortedArr = Sortedarr;
+			 
+			int[] arrSelectionSort = testData.clone();
+			
+			selectionSort.selectionSort(arrSelectionSort);
+            assertArrayEquals(expectedSortedArr, arrSelectionSort);
+		}
 	}
 	
 	public void testNegative(){
 		//Given
 		SelectionSort selectionSort = new SelectionSort();
-		int[] testData = new int[5];
-		testData[0] = -8;
-		testData[1] = -9;
-		testData[2] = -7;
-		testData[3] = -10;
-		testData[4] = -2;
-		int[] SortedTestData = new int[5];
-		SortedTestData[0] = -10;
-		SortedTestData[1] = -9;
-		SortedTestData[2] = -8;
-		SortedTestData[3] = -7;
-		SortedTestData[4] = -2;
-
-        //When
-		selectionSort.selectionSort(testData);
-        
-		//Then
-		assertArrayEquals(SortedTestData, selectionSort.selectionSort(testData));
+		int[] arr = new int[5];
+		arr[0] = -8;
+		arr[1] = -9;
+		arr[2] = -7;
+		arr[3] = -10;
+		arr[4] = -2;
+		int[] Sortedarr = new int[5];
+		Sortedarr[0] = -10;
+		Sortedarr[1] = -9;
+		Sortedarr[2] = -8;
+		Sortedarr[3] = -7;
+		Sortedarr[4] = -2;
+		for (int i = 0; i < arr.length; i++) {
+			int[] testData = arr;
+			int[] expectedSortedArr = Sortedarr;
+			 
+			int[] arrSelectionSort = testData.clone();
+			
+			selectionSort.selectionSort(arrSelectionSort);
+            assertArrayEquals(expectedSortedArr, arrSelectionSort);
+		}
 	}
 	
 	public void testMixed(){
 		//Given
 		SelectionSort selectionSort = new SelectionSort();
-		int[] testData = new int[5];
-		testData[0] = -8;
-		testData[1] = 9;
-		testData[2] = 7;
-		testData[3] = -10;
-		testData[4] = 0;
-		int[] SortedTestData = new int[5];
-		SortedTestData[0] = -10;
-		SortedTestData[1] = -8;
-		SortedTestData[2] = 0;
-		SortedTestData[3] = 7;
-		SortedTestData[4] = 9;
-		
-        //When
-		selectionSort.selectionSort(testData);
-        
-		//Then
-        assertArrayEquals(SortedTestData, selectionSort.selectionSort(testData));
+		int[] arr = new int[5];
+		arr[0] = -8;
+		arr[1] = 9;
+		arr[2] = 7;
+		arr[3] = -10;
+		arr[4] = 0;
+		int[] Sortedarr = new int[5];
+		Sortedarr[0] = -10;
+		Sortedarr[1] = -8;
+		Sortedarr[2] = 0;
+		Sortedarr[3] = 7;
+		Sortedarr[4] = 9;
+		for (int i = 0; i < arr.length; i++) {
+			int[] testData = arr;
+			int[] expectedSortedArr = Sortedarr;
+			 
+			int[] arrSelectionSort = testData.clone();
+			
+			selectionSort.selectionSort(arrSelectionSort);
+            assertArrayEquals(expectedSortedArr, arrSelectionSort);
+		}
 	}
+	
 
 }
